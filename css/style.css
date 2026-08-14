@@ -384,13 +384,17 @@ ul { margin: 0; padding: 0; list-style: none; }
   letter-spacing: 0.04em;
   margin-bottom: 2px;
 }
-.muted { color: #b3ae9e; font-style: italic; }
 .schedule-row-off { background: var(--cream-tint); }
 .off-day {
   grid-column: 2 / -1;
   font-style: italic;
   color: var(--ink-soft);
 }
+.single-session {
+  grid-column: 2 / -1;
+  color: var(--ink-soft);
+}
+.single-session .time { margin-bottom: 4px; }
 
 /* Pricing */
 .pricing-grid {
@@ -573,6 +577,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   .schedule-row > div { padding: 10px 20px; }
   .schedule-row .day { padding-top: 18px; }
   .off-day { grid-column: auto; padding-bottom: 18px !important; }
+  .single-session { grid-column: auto; padding-bottom: 18px !important; }
   .schedule-row > div::before {
     content: attr(data-label);
     display: block;
