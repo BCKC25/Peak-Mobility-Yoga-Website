@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <script src="https://widgets.mindbodyonline.com/javascripts/healcode.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -224,12 +225,27 @@
     <!-- Booking / Contact -->
     <section class="section section-dark" id="booking">
       <div class="container booking-inner">
-        <p class="section-eyebrow section-eyebrow-light center">Booking Opens Soon</p>
-        <h2 class="center">We're getting ready to launch in October 2026</h2>
-        <p class="section-lead section-lead-light center">Online booking through our scheduling software will open closer to launch. In the meantime, reach out and we'll make sure you're first in line for a spot on the mat.</p>
-        <div class="booking-actions" id="contact">
-          <a href="mailto:k.lovett@peakmobilityyoga.com" class="btn btn-primary btn-lg">Email Us</a>
-          <a href="https://www.instagram.com/peak.mobility.yoga/" class="btn btn-outline btn-outline-light btn-lg" target="_blank" rel="noopener">Follow on Instagram</a>
+        <p class="section-eyebrow section-eyebrow-light center">Book Online</p>
+        <h2 class="center">Reserve your spot</h2>
+        <p class="section-lead section-lead-light center">Browse upcoming classes and book directly below. Spots are limited to 15 students, so grab yours early.</p>
+
+        <div class="mindbody-widget-slot">
+          <healcode-widget
+            data-type="class_lists"
+            data-widget-partner="object"
+            data-widget-id="b3988699fe2"
+            data-widget-version="0">
+          </healcode-widget>
+        </div>
+
+        <div class="booking-contact" id="contact">
+          <p class="section-eyebrow section-eyebrow-light center">Stay Connected</p>
+          <h3 class="center">Say hello or follow along</h3>
+          <p class="section-lead-light center">Have a question, or just want to see what's happening at the studio? Reach out anytime.</p>
+          <div class="booking-actions">
+            <a href="mailto:k.lovett@peakmobilityyoga.com" class="btn btn-primary btn-lg">Email Us</a>
+            <a href="https://www.instagram.com/peak.mobility.yoga/" class="btn btn-outline btn-outline-light btn-lg" target="_blank" rel="noopener">Follow on Instagram</a>
+          </div>
         </div>
       </div>
     </section>

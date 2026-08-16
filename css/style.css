@@ -493,6 +493,25 @@ ul { margin: 0; padding: 0; list-style: none; }
   margin-top: 8px;
 }
 
+.mindbody-widget-slot {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 32px;
+  margin-top: 40px;
+  color: var(--ink);
+}
+
+.booking-contact {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+.booking-contact h3 { margin-bottom: 10px; }
+.booking-contact .section-lead-light {
+  max-width: 480px;
+  margin: 0 auto 24px;
+}
+
 /* ---------- Footer ---------- */
 .site-footer {
   background: var(--charcoal-deep);
