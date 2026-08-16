@@ -493,6 +493,14 @@ ul { margin: 0; padding: 0; list-style: none; }
   margin-top: 8px;
 }
 
+.mindbody-widget-slot {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 32px;
+  margin-top: 40px;
+  color: var(--ink);
+}
+
 /* ---------- Footer ---------- */
 .site-footer {
   background: var(--charcoal-deep);
