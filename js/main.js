@@ -2,11 +2,10 @@
 // 1. Drop the image file into assets/images/hero/
 // 2. Add or remove its filename in this list (any order — it's shuffled below)
 const HERO_PHOTOS = [
-  "placeholder-1.jpg",
-  "placeholder-2.jpg",
-  "placeholder-3.jpg",
-  "placeholder-4.jpg",
-  "placeholder-5.jpg",
+  "IMG_9654.JPG",
+  "IMG_9655.JPG",
+  "IMG_9657.JPG",
+  "IMG_9658.JPG",
 ];
 
 function shuffle(array) {
