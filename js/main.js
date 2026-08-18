@@ -1,3 +1,23 @@
+// Hero photo slideshow — to add or remove a photo:
+// 1. Drop the image file into assets/images/hero/
+// 2. Add or remove its filename in this list (any order — it's shuffled below)
+const HERO_PHOTOS = [
+  "placeholder-1.jpg",
+  "placeholder-2.jpg",
+  "placeholder-3.jpg",
+  "placeholder-4.jpg",
+  "placeholder-5.jpg",
+];
+
+function shuffle(array) {
+  const result = array.slice();
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const navToggle = document.getElementById("nav-toggle");
   const mainNav = document.getElementById("main-nav");
@@ -22,7 +42,33 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const slideshow = document.getElementById("hero-slideshow");
-  if (slideshow) {
+  if (slideshow && HERO_PHOTOS.length > 0) {
+    const photos = shuffle(HERO_PHOTOS);
+
+    photos.forEach((filename, index) => {
+      const slide = document.createElement("div");
+      slide.className = "hero-slide" + (index === 0 ? " is-active" : "");
+      const img = document.createElement("img");
+      img.src = `assets/images/hero/${filename}`;
+      img.alt = `Studio photo ${index + 1}`;
+      img.loading = index === 0 ? "eager" : "lazy";
+      slide.appendChild(img);
+      slideshow.appendChild(slide);
+    });
+
+    if (photos.length > 1) {
+      const dotsWrap = document.createElement("div");
+      dotsWrap.className = "hero-slide-dots";
+      photos.forEach((_, index) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "hero-slide-dot" + (index === 0 ? " is-active" : "");
+        dot.setAttribute("aria-label", `Show photo ${index + 1}`);
+        dotsWrap.appendChild(dot);
+      });
+      slideshow.appendChild(dotsWrap);
+    }
+
     const slides = slideshow.querySelectorAll(".hero-slide");
     const dots = slideshow.querySelectorAll(".hero-slide-dot");
     let current = 0;
