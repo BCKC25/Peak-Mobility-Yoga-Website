@@ -97,9 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    slideshow.addEventListener("mouseenter", stopAutoplay);
-    slideshow.addEventListener("mouseleave", startAutoplay);
-
     startAutoplay();
   }
 });
