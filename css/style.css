@@ -558,6 +558,14 @@ ul { margin: 0; padding: 0; list-style: none; }
   color: var(--ink);
 }
 
+/* Standalone landing page (e.g. QR-code intro-offer page) */
+.header-inner-center {
+  justify-content: center;
+}
+.narrow-container {
+  max-width: 620px;
+}
+
 .booking-contact {
   margin-top: 56px;
   padding-top: 40px;
