@@ -378,7 +378,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* Classes */
 .class-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 22px;
 }
 .class-card {
