@@ -493,6 +493,11 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .price-desc { font-size: 0.92rem; margin: 0; }
 .price-card-btn { margin-top: 20px; }
+.pricing-cta {
+  margin: 36px auto 0;
+  color: var(--ink-soft);
+}
+.pricing-cta a { color: var(--gold-dark); font-weight: 600; }
 
 /* Location */
 .location-grid {
@@ -537,12 +542,16 @@ ul { margin: 0; padding: 0; list-style: none; }
   color: var(--ink);
 }
 
-/* Standalone landing page (e.g. QR-code intro-offer page) */
+/* Standalone landing page (e.g. QR-code / nav-linked request-info page) */
 .header-inner-center {
   justify-content: center;
 }
 .narrow-container {
   max-width: 620px;
+}
+.join-alt-contact {
+  margin-top: 32px;
+  font-size: 0.95rem;
 }
 
 .booking-contact {
