@@ -554,6 +554,41 @@ ul { margin: 0; padding: 0; list-style: none; }
   font-size: 0.95rem;
 }
 
+/* Standalone booking page (linked from Google Business Profile, etc.) */
+.section.book-hero {
+  padding: 28px 0 40px;
+}
+.book-hero h1 {
+  font-size: 1.7rem;
+  margin-bottom: 0.3em;
+}
+.book-hero .section-eyebrow {
+  margin-bottom: 4px;
+}
+.book-hero .mindbody-widget-slot {
+  margin-top: 18px;
+  padding: 20px;
+}
+.book-price-line {
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+.first-timer-list {
+  max-width: 620px;
+  margin: 0 auto;
+  display: grid;
+  gap: 24px;
+}
+.first-timer-item dt {
+  font-weight: 600;
+  color: var(--gold-dark);
+  margin-bottom: 4px;
+}
+.first-timer-item dd {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
 .booking-contact {
   margin-top: 56px;
   padding-top: 40px;
@@ -670,4 +705,5 @@ ul { margin: 0; padding: 0; list-style: none; }
   .section { padding: 64px 0; }
   .brand-logo { height: 42px; }
   .booking-actions { flex-direction: column; align-items: stretch; }
+  .section.book-hero { padding: 16px 0 28px; }
 }
