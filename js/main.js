@@ -50,6 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const img = document.createElement("img");
       img.src = `assets/images/hero/${filename}`;
       img.alt = `Studio photo ${index + 1}`;
+      img.width = 1280;
+      img.height = 1600;
       img.loading = index === 0 ? "eager" : "lazy";
       slide.appendChild(img);
       slideshow.appendChild(slide);
