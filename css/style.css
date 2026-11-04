@@ -660,6 +660,10 @@ ul { margin: 0; padding: 0; list-style: none; }
   align-items: center;
   justify-content: center;
 }
+.coach-avatar-photo {
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
 .coach-bio h2 { margin-bottom: 2px; }
 .coach-title {
   color: var(--gold-dark);
@@ -668,15 +672,6 @@ ul { margin: 0; padding: 0; list-style: none; }
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 16px;
-}
-.coach-placeholder-note {
-  margin-top: 16px;
-  font-size: 0.85rem;
-  font-style: italic;
-  color: var(--ink-soft);
-  background: #fff;
-  border-radius: var(--radius);
-  padding: 10px 14px;
 }
 
 .booking-contact {
