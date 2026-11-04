@@ -101,4 +101,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     startAutoplay();
   }
+
+  const coachTabs = document.querySelectorAll(".coach-tab");
+  const coachPanels = document.querySelectorAll("[data-coach-panel]");
+  if (coachTabs.length && coachPanels.length) {
+    coachTabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const target = tab.getAttribute("data-coach");
+        coachTabs.forEach((t) => {
+          const isActive = t === tab;
+          t.classList.toggle("is-active", isActive);
+          t.setAttribute("aria-selected", String(isActive));
+        });
+        coachPanels.forEach((panel) => {
+          panel.hidden = panel.id !== `coach-${target}`;
+        });
+      });
+    });
+  }
 });

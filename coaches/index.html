@@ -70,15 +70,22 @@
         <p class="section-eyebrow center">Meet the Team</p>
         <h1 class="center">The Coaches Behind Peak Mobility Yoga</h1>
         <p class="section-lead center">Two instructors, one shared belief: yoga should be approachable, affordable, and welcoming &mdash; no matter where you're starting from.</p>
+
+        <div class="coach-tabs" role="tablist" aria-label="Select a coach">
+          <button class="coach-tab is-active" type="button" data-coach="kelsey" role="tab" aria-selected="true" aria-controls="coach-kelsey">Kelsey Lovett</button>
+          <button class="coach-tab" type="button" data-coach="taylor" role="tab" aria-selected="false" aria-controls="coach-taylor">Taylor Wood</button>
+        </div>
       </div>
     </section>
 
     <section class="section section-tint">
       <div class="container">
-        <div class="coach-grid">
-          <div class="coach-card">
-            <div class="coach-avatar" aria-hidden="true">KL</div>
-            <h3>Kelsey Lovett</h3>
+        <div class="coach-profile" id="coach-kelsey" data-coach-panel role="tabpanel">
+          <div class="coach-photo">
+            <div class="coach-avatar-lg" aria-hidden="true">KL</div>
+          </div>
+          <div class="coach-bio">
+            <h2>Kelsey Lovett</h2>
             <p class="coach-title">Founder &amp; Lead Instructor</p>
             <p>Peak Mobility Yoga was founded on a simple belief: everyone deserves access to movement, breath, and community &mdash; regardless of budget or experience level. After more than six years of teaching yoga throughout Aiken, Kelsey opened a dedicated studio space inside Total Vibe Salon and Studios, built around the same values that have guided her practice from the start.</p>
             <p>Every class is designed to be approachable for beginners while still offering depth for experienced yogis. No judgment, no intimidation &mdash; just a supportive room, a mat, and a little space to move at your own pace.</p>
@@ -87,10 +94,14 @@
               <li><strong>10-member</strong> open floor plan studio for a personal, low-pressure class size</li>
             </ul>
           </div>
+        </div>
 
-          <div class="coach-card">
-            <div class="coach-avatar" aria-hidden="true">TW</div>
-            <h3>Taylor Wood</h3>
+        <div class="coach-profile" id="coach-taylor" data-coach-panel hidden role="tabpanel">
+          <div class="coach-photo">
+            <div class="coach-avatar-lg" aria-hidden="true">TW</div>
+          </div>
+          <div class="coach-bio">
+            <h2>Taylor Wood</h2>
             <p class="coach-title">Coach</p>
             <p>Taylor is joining the Peak Mobility Yoga team to lead our new Tuesday evening Mobility Flow class, starting November 24th.</p>
             <p class="coach-placeholder-note">Full bio &amp; photo coming soon &mdash; check back shortly!</p>
