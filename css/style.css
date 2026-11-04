@@ -441,17 +441,38 @@ ul { margin: 0; padding: 0; list-style: none; }
   letter-spacing: 0.04em;
   margin-bottom: 2px;
 }
-.schedule-row-off { background: var(--cream-tint); }
-.off-day {
-  grid-column: 2 / -1;
-  font-style: italic;
-  color: var(--ink-soft);
-}
 .single-session {
   grid-column: 2 / -1;
   color: var(--ink-soft);
 }
 .single-session .time { margin-bottom: 4px; }
+
+.schedule-callout {
+  background: var(--gold-tint);
+  border-radius: var(--radius);
+  padding: 14px 24px;
+  margin-bottom: 28px;
+  color: var(--ink);
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-top: 4px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.badge-new { background: var(--gold); color: #fff; }
+.badge-soon { background: var(--charcoal-deep); color: #fff; }
 
 /* Pricing */
 .pricing-grid {
@@ -589,6 +610,70 @@ ul { margin: 0; padding: 0; list-style: none; }
   color: var(--ink-soft);
 }
 
+/* Coaches page */
+.coach-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+.coach-tab {
+  font-family: "Jost", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.coach-tab:hover { border-color: var(--gold); }
+.coach-tab.is-active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #fff;
+}
+
+.coach-profile {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+  max-width: 880px;
+  margin: 0 auto;
+  align-items: start;
+}
+.coach-profile[hidden] { display: none; }
+.coach-photo { display: flex; justify-content: center; }
+.coach-avatar-lg {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: #fff;
+  font-family: "Fraunces", serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.coach-avatar-photo {
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+.coach-bio h2 { margin-bottom: 2px; }
+.coach-title {
+  color: var(--gold-dark);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+}
+
 .booking-contact {
   margin-top: 56px;
   padding-top: 40px;
@@ -680,13 +765,16 @@ ul { margin: 0; padding: 0; list-style: none; }
 
   .class-grid { grid-template-columns: 1fr; }
   .pricing-grid { grid-template-columns: 1fr; }
+  .coach-profile { grid-template-columns: 1fr; text-align: center; }
+  .coach-photo { margin-bottom: 8px; }
+  .coach-bio { text-align: left; }
 
   .schedule-row { grid-template-columns: 1fr; }
   .schedule-head { display: none; }
   .schedule-row > div { padding: 10px 20px; }
   .schedule-row .day { padding-top: 18px; }
-  .off-day { grid-column: auto; padding-bottom: 18px !important; }
   .single-session { grid-column: auto; padding-bottom: 18px !important; }
+  .schedule-row > div:empty { display: none; }
   .schedule-row > div::before {
     content: attr(data-label);
     display: block;
