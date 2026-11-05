@@ -24,14 +24,71 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <title>Peak Mobility Yoga | Aiken, SC</title>
-  <meta name="description" content="Welcoming, affordable yoga in Aiken, SC. 14 classes a week at 1510 Whiskey Rd with drop-ins, class packs and unlimited memberships. Beginners welcome." />
+  <title>Yoga Classes in Aiken, SC | Peak Mobility Yoga</title>
+  <meta name="description" content="Welcoming, affordable yoga on Whiskey Rd in Aiken. 14 classes a week, max 10 per class, beginners welcome. Book your first class online." />
   <link rel="icon" type="image/png" href="assets/images/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <script async src="https://brandedweb.mindbodyonline.com/embed/widget.js"></script>
+
+  <meta property="og:title" content="Yoga Classes in Aiken, SC | Peak Mobility Yoga" />
+  <meta property="og:description" content="Welcoming, affordable yoga on Whiskey Rd in Aiken. 14 classes a week, max 10 per class, beginners welcome." />
+  <meta property="og:url" content="https://www.peakmobilityyoga.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Peak Mobility Yoga" />
+  <!-- TODO(Josh): add a 1200x630 share image at /assets/images/og-default.jpg -->
+  <meta property="og:image" content="https://www.peakmobilityyoga.com/assets/images/og-default.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- TODO(Josh): add "geo": {"@type":"GeoCoordinates","latitude":...,"longitude":...} below once you have the exact lat/long from the Google Business Profile pin -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "YogaStudio",
+    "@id": "https://www.peakmobilityyoga.com/#studio",
+    "name": "Peak Mobility Yoga",
+    "url": "https://www.peakmobilityyoga.com/",
+    "logo": "https://www.peakmobilityyoga.com/assets/images/logo.png",
+    "image": "https://www.peakmobilityyoga.com/assets/images/logo.png",
+    "telephone": "+1-803-843-6910",
+    "email": "k.lovett@peakmobilityyoga.com",
+    "priceRange": "$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1510 Whiskey Rd",
+      "addressLocality": "Aiken",
+      "addressRegion": "SC",
+      "postalCode": "29803",
+      "addressCountry": "US"
+    },
+    "areaServed": "Aiken, SC",
+    "sameAs": [
+      "https://www.instagram.com/peak.mobility.yoga/",
+      "https://www.facebook.com/people/Peak-Mobility-Yoga/61593125321186/"
+    ],
+    "openingHoursSpecification": [
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Wednesday", "Friday"], "opens": "08:00", "closes": "19:45"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Thursday"], "opens": "08:00", "closes": "09:00"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "07:45", "closes": "08:45"},
+      {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "13:30", "closes": "14:30"}
+    ],
+    "makesOffer": [
+      {"@type": "Offer", "name": "Single Class Drop-In", "price": "18", "priceCurrency": "USD"},
+      {"@type": "Offer", "name": "10-Class Pack", "price": "140", "priceCurrency": "USD"},
+      {"@type": "Offer", "name": "Monthly Unlimited Membership", "price": "99", "priceCurrency": "USD"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Peak Mobility Yoga",
+    "url": "https://www.peakmobilityyoga.com/"
+  }
+  </script>
 </head>
 <body>
 
@@ -39,25 +96,32 @@
 
   <header class="site-header" id="site-header">
     <div class="container header-inner">
-      <a href="#top" class="brand">
+      <a href="/" class="brand">
         <img src="assets/images/logo.png" alt="Peak Mobility Yoga logo" width="303" height="304" class="brand-logo" />
       </a>
 
       <nav class="main-nav" id="main-nav">
         <ul>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="coaches/" class="nav-link">Coaches</a></li>
-          <li><a href="#classes" class="nav-link">Classes</a></li>
-          <li><a href="#schedule" class="nav-link">Schedule</a></li>
-          <li><a href="#pricing" class="nav-link">Pricing</a></li>
-          <li><a href="join/" class="nav-link">Request Info</a></li>
-          <li><a href="#location" class="nav-link">Location</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li class="nav-dropdown">
+            <button type="button" class="nav-dropdown-toggle" id="classes-toggle" aria-expanded="false" aria-controls="classes-menu">Classes <span class="nav-caret" aria-hidden="true">&#9662;</span></button>
+            <ul class="nav-dropdown-menu" id="classes-menu">
+              <li><a href="/classes/beginner-yoga/">Beginner Yoga</a></li>
+              <li><a href="/classes/vinyasa-flow/">Vinyasa Flow</a></li>
+              <li><a href="/classes/mobility-flow/">Mobility Flow</a></li>
+              <li><a href="/classes/gentle-yoga/">Gentle Yoga</a></li>
+              <li><a href="/classes/">All Classes</a></li>
+            </ul>
+          </li>
+          <li><a href="/schedule/" class="nav-link">Schedule</a></li>
+          <li><a href="/pricing/" class="nav-link">Pricing</a></li>
+          <li><a href="/first-class/" class="nav-link">First Class</a></li>
+          <li><a href="/coaches/" class="nav-link">Coaches</a></li>
+          <li><a href="/location/" class="nav-link">Location</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
-        <a href="#booking" class="btn btn-primary">Book a Class</a>
+        <a href="/book/" class="btn btn-primary">Book a Class</a>
         <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
           <span></span><span></span><span></span>
         </button>
@@ -75,12 +139,12 @@
       </div>
       <div class="container hero-grid">
         <div class="hero-inner">
-          <p class="eyebrow">Aiken, South Carolina &middot; Opening October 2026</p>
-          <h1>Yoga that meets you where you are &mdash; and never breaks the bank.</h1>
-          <p class="hero-sub">Peak Mobility Yoga brings six years of trusted, local yoga instruction to a brand-new home inside Total Vibe Salon and Studios. Real community, gentle guidance, and studio classes priced for real life.</p>
+          <p class="eyebrow">Now open on Whiskey Rd &middot; Aiken, SC</p>
+          <h1>Yoga Classes in Aiken, SC</h1>
+          <p class="hero-sub"><strong>Yoga that meets you where you are &mdash; and never breaks the bank.</strong> Peak Mobility Yoga brings six years of trusted, local yoga instruction to a home inside Total Vibe Salon and Studios. Real community, gentle guidance, and studio classes priced for real life.</p>
           <div class="hero-actions">
-            <a href="#booking" class="btn btn-primary btn-lg">Book a Class</a>
-            <a href="#schedule" class="btn btn-outline btn-lg">View Schedule</a>
+            <a href="/book/" class="btn btn-primary btn-lg">Book a Class</a>
+            <a href="/schedule/" class="btn btn-outline btn-lg">View Schedule</a>
           </div>
         </div>
 
@@ -94,8 +158,8 @@
         <div class="about-copy">
           <p class="section-eyebrow">Our Story</p>
           <h2>Six years of teaching Aiken to breathe a little easier.</h2>
-          <p>Peak Mobility Yoga was founded on a simple belief: everyone deserves access to movement, breath, and community &mdash; regardless of budget or experience level. After more than six years of teaching yoga throughout Aiken, our founder is opening a dedicated studio space inside Total Vibe Salon and Studios, built around the same values that have guided her practice from the start.</p>
-          <p>Every class is designed to be approachable for beginners while still offering depth for experienced yogis. No judgment, no intimidation &mdash; just a supportive room, a mat, and a little space to move at your own pace.</p>
+          <p>Peak Mobility Yoga was founded on a simple belief: everyone deserves access to movement, breath, and community &mdash; regardless of budget or experience level. After more than six years of teaching yoga throughout Aiken, our founder opened a dedicated studio space inside Total Vibe Salon and Studios, built around the same values that have guided her practice from the start.</p>
+          <p>Every class is designed to be approachable for beginners while still offering depth for experienced yogis. No judgment, no intimidation &mdash; just a supportive room, a mat, and a little space to move at your own pace. Classes stay small on purpose, so your instructor can actually see how you're moving and offer hands-on cues instead of talking to a crowd.</p>
           <ul class="about-points">
             <li><strong>6+ years</strong> teaching yoga in the Aiken community</li>
             <li><strong>10-member</strong> open floor plan studio for a personal, low-pressure class size</li>
@@ -112,27 +176,43 @@
       </div>
     </section>
 
+    <!-- New here? -->
+    <section class="section section-tint">
+      <div class="container narrow-container center">
+        <p class="section-eyebrow center">New Here?</p>
+        <h2 class="center">Never done yoga before? Perfect.</h2>
+        <p class="section-lead center">Every class is beginner-friendly, mats and props are provided, and you'll know exactly what to expect before you ever step on the mat. Just bring water, wear something comfortable, and plan to arrive about 10 minutes early so you have time to sign in and settle in.</p>
+        <p class="section-teaser-link"><a href="/first-class/" class="btn btn-primary">Your First Class</a></p>
+      </div>
+    </section>
+
     <!-- Classes -->
-    <section class="section section-tint" id="classes">
+    <section class="section" id="classes">
       <div class="container">
         <p class="section-eyebrow center">What We Offer</p>
         <h2 class="center">Find your flow</h2>
         <p class="section-lead center">Every class fits inside our open floor plan studio, capped at 10 members so your instructor can actually see you.</p>
 
         <div class="class-grid">
-          <div class="class-card">
-            <h3>Vinyasa Flow</h3>
-            <p>Breath-linked, dynamic sequences that build heat and strength, moving from one posture to the next.</p>
-          </div>
-          <div class="class-card">
+          <a class="class-card" href="/classes/beginner-yoga/">
             <h3>Beginner Yoga</h3>
             <p>A gentle, approachable introduction to the fundamentals &mdash; no experience necessary.</p>
-          </div>
-          <div class="class-card">
+          </a>
+          <a class="class-card" href="/classes/vinyasa-flow/">
+            <h3>Vinyasa Flow</h3>
+            <p>Breath-linked, dynamic sequences that build heat and strength, moving from one posture to the next.</p>
+          </a>
+          <a class="class-card" href="/classes/mobility-flow/">
             <h3>Mobility Flow</h3>
             <p>Movement-based sequences that build real-world strength, mobility, and balance.</p>
-          </div>
+          </a>
+          <a class="class-card" href="/classes/gentle-yoga/">
+            <h3>Gentle Yoga</h3>
+            <p>A slower pace for stiff joints, recovery, and easing into practice. Sunrise and Sunday Reset.</p>
+          </a>
         </div>
+
+        <p class="section-teaser-link"><a href="/classes/" class="btn btn-outline">See All Classes</a></p>
       </div>
     </section>
 
@@ -198,6 +278,8 @@
             <div class="single-session" role="cell" colspan="3"><span class="time">1:30 &ndash; 2:30 PM</span>Sunday Reset Flow</div>
           </div>
         </div>
+
+        <p class="section-teaser-link"><a href="/schedule/" class="btn btn-outline">Full Schedule</a></p>
       </div>
     </section>
 
@@ -214,7 +296,7 @@
             <p class="price">$18</p>
             <p class="price-note">per class</p>
             <p class="price-desc">Perfect for your first visit or whenever your schedule calls for it. Book online or pay in-studio.</p>
-            <a href="https://go.mindbodyonline.com/book/app/pricing/bus_11kZQqxfyVKLXRWmsD/po_11kZQqxfyVKLWvXTSc?mbo_src=po-mgmt-copy-link" class="btn btn-outline price-card-btn" target="_blank" rel="noopener">Buy Now</a>
+            <a href="https://go.mindbodyonline.com/book/app/pricing/bus_11kZQqxfyVKLXRWmsD/po_11kZQqxfyVKLWvXTSc?mbo_src=po-mgmt-copy-link&utm_source=website&utm_medium=referral&utm_campaign=home" class="btn btn-outline price-card-btn" target="_blank" rel="noopener">Buy Now</a>
           </div>
 
           <div class="price-card">
@@ -222,7 +304,7 @@
             <p class="price">$140</p>
             <p class="price-note">$14 per class &middot; valid 12 months</p>
             <p class="price-desc">A flexible 10-visit card for regular practice, valid for a full 12 months from purchase.</p>
-            <a href="https://go.mindbodyonline.com/book/app/pricing/bus_11kZQqxfyVKLXRWmsD/po_11kZQqxfyVKLWvXTRb?mbo_src=po-mgmt-copy-link" class="btn btn-outline price-card-btn" target="_blank" rel="noopener">Buy Now</a>
+            <a href="https://go.mindbodyonline.com/book/app/pricing/bus_11kZQqxfyVKLXRWmsD/po_11kZQqxfyVKLWvXTRb?mbo_src=po-mgmt-copy-link&utm_source=website&utm_medium=referral&utm_campaign=home" class="btn btn-outline price-card-btn" target="_blank" rel="noopener">Buy Now</a>
           </div>
 
           <div class="price-card price-card-featured">
@@ -230,11 +312,12 @@
             <p class="price">$99</p>
             <p class="price-note">per month &middot; unlimited classes &middot; no contract</p>
             <p class="price-desc">Unlimited classes, no contract &mdash; cancel anytime.</p>
-            <a href="https://go.mindbodyonline.com/book/app/pricing/bus_11kZQqxfyVKLXRWmsD/po_11kZQqxfyVKLWvXTYi?mbo_src=po-mgmt-copy-link" class="btn btn-outline-light price-card-btn" target="_blank" rel="noopener">Buy Now</a>
+            <a href="https://go.mindbodyonline.com/book/app/pricing/bus_11kZQqxfyVKLXRWmsD/po_11kZQqxfyVKLWvXTYi?mbo_src=po-mgmt-copy-link&utm_source=website&utm_medium=referral&utm_campaign=home" class="btn btn-outline-light price-card-btn" target="_blank" rel="noopener">Buy Now</a>
           </div>
         </div>
 
-        <p class="pricing-cta center">Not ready to commit? <a href="join/">Get in touch</a> and we'll answer your questions first &mdash; no account needed.</p>
+        <p class="section-teaser-link"><a href="/pricing/" class="btn btn-outline">Compare Options</a></p>
+        <p class="pricing-cta center">Not ready to commit? <a href="/join/">Get in touch</a> and we'll answer your questions first &mdash; no account needed.</p>
       </div>
     </section>
 
@@ -246,10 +329,15 @@
           <h2>Inside Total Vibe Salon and Studios</h2>
           <p>Peak Mobility Yoga is located inside Total Vibe Salon and Studios, in an open floor plan studio space designed to feel warm and unintimidating &mdash; not like a big-box gym.</p>
           <p class="location-address">
+            Peak Mobility Yoga<br />
             1510 Whiskey Rd<br />
-            Aiken, SC
+            Aiken, SC 29803<br />
+            <a href="tel:+18038436910">(803) 843-6910</a>
           </p>
-          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=1510+Whiskey+Rd+Aiken+SC" target="_blank" rel="noopener">Get Directions</a>
+          <div class="hero-actions">
+            <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=1510+Whiskey+Rd+Aiken+SC" target="_blank" rel="noopener">Get Directions</a>
+            <a class="btn btn-outline" href="/location/">More About This Location</a>
+          </div>
         </div>
         <div class="location-map">
           <iframe
@@ -259,6 +347,53 @@
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
+      </div>
+    </section>
+
+    <!-- Reviews (placeholder -- not shown until real reviews are added) -->
+    <!-- TODO(Josh): paste 3-5 real Google reviews and the GBP review link below, then remove the hidden attribute -->
+    <section class="section reviews-section" hidden>
+      <div class="container">
+        <p class="section-eyebrow center">What Students Say</p>
+        <h2 class="center">Loved in Aiken</h2>
+        <div class="class-grid">
+          <div class="class-card">
+            <p>&ldquo;Review text goes here.&rdquo;</p>
+            <p><strong>&mdash; Student Name</strong></p>
+          </div>
+          <div class="class-card">
+            <p>&ldquo;Review text goes here.&rdquo;</p>
+            <p><strong>&mdash; Student Name</strong></p>
+          </div>
+          <div class="class-card">
+            <p>&ldquo;Review text goes here.&rdquo;</p>
+            <p><strong>&mdash; Student Name</strong></p>
+          </div>
+        </div>
+        <p class="section-teaser-link"><a href="#" class="btn btn-outline">Leave Us a Google Review</a></p>
+      </div>
+    </section>
+
+    <!-- FAQ teaser -->
+    <section class="section section-tint">
+      <div class="container narrow-container">
+        <p class="section-eyebrow center">Questions?</p>
+        <h2 class="center">A Few Things People Ask</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Do I need experience to come to class?</summary>
+            <p>No. Every class is beginner-friendly, and Beginner Yoga is designed specifically for people brand-new to the practice.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What should I bring?</summary>
+            <p>Just water and comfortable clothes. Mats and props are provided.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How much is a drop-in class?</summary>
+            <p>$18 per class, with no commitment. We also offer a 10-class pack and an unlimited monthly membership.</p>
+          </details>
+        </div>
+        <p class="section-teaser-link"><a href="/faq/" class="btn btn-outline">See All FAQs</a></p>
       </div>
     </section>
 
@@ -279,7 +414,7 @@
           <p class="section-lead-light center">Have a question, or just want to see what's happening at the studio? Reach out anytime.</p>
           <div class="booking-actions">
             <a href="mailto:k.lovett@peakmobilityyoga.com" class="btn btn-primary btn-lg">Email Us</a>
-            <a href="tel:+18038436910" class="btn btn-outline btn-outline-light btn-lg">Call 803-843-6910</a>
+            <a href="tel:+18038436910" class="btn btn-outline btn-outline-light btn-lg">Call (803) 843-6910</a>
             <a href="https://www.instagram.com/peak.mobility.yoga/" class="btn btn-outline btn-outline-light btn-lg" target="_blank" rel="noopener">Follow on Instagram</a>
             <a href="https://www.facebook.com/people/Peak-Mobility-Yoga/61593125321186/" class="btn btn-outline btn-outline-light btn-lg" target="_blank" rel="noopener">Follow on Facebook</a>
           </div>
@@ -296,13 +431,25 @@
       </div>
 
       <div class="footer-links">
+        <h4>Classes</h4>
+        <ul>
+          <li><a href="/classes/beginner-yoga/">Beginner Yoga</a></li>
+          <li><a href="/classes/vinyasa-flow/">Vinyasa Flow</a></li>
+          <li><a href="/classes/mobility-flow/">Mobility Flow</a></li>
+          <li><a href="/classes/gentle-yoga/">Gentle Yoga</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
         <h4>Explore</h4>
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="coaches/">Coaches</a></li>
-          <li><a href="#schedule">Schedule</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#location">Location</a></li>
+          <li><a href="/schedule/">Schedule</a></li>
+          <li><a href="/pricing/">Pricing</a></li>
+          <li><a href="/first-class/">First Class</a></li>
+          <li><a href="/private-yoga/">Private Yoga</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/coaches/">Coaches</a></li>
+          <li><a href="/location/">Location</a></li>
         </ul>
       </div>
 
@@ -310,10 +457,11 @@
         <h4>Connect</h4>
         <ul>
           <li><a href="mailto:k.lovett@peakmobilityyoga.com">k.lovett@peakmobilityyoga.com</a></li>
-          <li><a href="tel:+18038436910">803-843-6910</a></li>
+          <li><a href="tel:+18038436910">(803) 843-6910</a></li>
           <li><a href="https://www.instagram.com/peak.mobility.yoga/" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="https://www.facebook.com/people/Peak-Mobility-Yoga/61593125321186/" target="_blank" rel="noopener">Facebook</a></li>
-          <li>1510 Whiskey Rd, Aiken, SC</li>
+          <li>1510 Whiskey Rd, Aiken, SC 29803</li>
+          <!-- TODO(Josh): add "Leave us a Google review" link once you have the GBP review link -->
         </ul>
       </div>
     </div>
@@ -324,7 +472,13 @@
     </div>
   </footer>
 
+  <div class="mobile-sticky-bar">
+    <a href="/book/" class="btn btn-primary">Book a Class</a>
+    <a href="tel:+18038436910" class="btn btn-outline">Call</a>
+  </div>
+
   <script src="js/main.js"></script>
+  <script src="js/tracking.js"></script>
 
   <script>
     (function(t,i,o,n,w,a,e){
