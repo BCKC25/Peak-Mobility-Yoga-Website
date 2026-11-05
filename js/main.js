@@ -103,6 +103,64 @@ document.addEventListener("DOMContentLoaded", () => {
     startAutoplay();
   }
 
+  const dropdownToggle = document.getElementById("classes-toggle");
+  const dropdownItem = dropdownToggle ? dropdownToggle.closest(".nav-dropdown") : null;
+  if (dropdownToggle && dropdownItem) {
+    const closeDropdown = () => {
+      dropdownItem.classList.remove("is-open");
+      dropdownToggle.setAttribute("aria-expanded", "false");
+    };
+    dropdownToggle.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const isOpen = dropdownItem.classList.toggle("is-open");
+      dropdownToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+    document.addEventListener("click", (event) => {
+      if (!dropdownItem.contains(event.target)) closeDropdown();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeDropdown();
+    });
+  }
+
+  const mapFacadeBtn = document.getElementById("map-facade-btn");
+  if (mapFacadeBtn) {
+    mapFacadeBtn.addEventListener("click", () => {
+      const wrap = document.getElementById(mapFacadeBtn.dataset.target || "location-map-wrap");
+      const src = mapFacadeBtn.dataset.mapSrc;
+      if (wrap && src) {
+        const iframe = document.createElement("iframe");
+        iframe.title = "Map to Peak Mobility Yoga, 1510 Whiskey Rd, Aiken, SC";
+        iframe.src = src;
+        iframe.loading = "lazy";
+        iframe.referrerPolicy = "no-referrer-when-downgrade";
+        wrap.innerHTML = "";
+        wrap.appendChild(iframe);
+      }
+    });
+  }
+
+  const mindbodySlot = document.querySelector("[data-lazy-mindbody]");
+  if (mindbodySlot && "IntersectionObserver" in window) {
+    const src = mindbodySlot.dataset.lazyMindbody;
+    const loadWidget = () => {
+      mindbodySlot.innerHTML = '<div class="mindbody-widget" data-widget-type="Schedules" data-widget-id="b3605859fe2"></div>';
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = src;
+      document.body.appendChild(script);
+    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          loadWidget();
+          observer.disconnect();
+        }
+      });
+    });
+    observer.observe(mindbodySlot);
+  }
+
   const coachTabs = document.querySelectorAll(".coach-tab");
   const coachPanels = document.querySelectorAll("[data-coach-panel]");
   if (coachTabs.length && coachPanels.length) {
